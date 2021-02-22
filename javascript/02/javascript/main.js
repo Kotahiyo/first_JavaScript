@@ -1,13 +1,6 @@
-let a = 1;
-let b = 2;
-
-console.log(a);
-console.log(b);
-
 {
-  let c = 3;
-  console.log(a);
-  console.log(c);
+  var global = 'グローバル';
+  let local = 'ローカル';
 }
-c = 5;
-console.log(c);
+console.log(local);
+console.log(global);
