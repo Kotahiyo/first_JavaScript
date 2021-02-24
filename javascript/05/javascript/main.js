@@ -11,9 +11,28 @@
 // console.log(result2);
 
 // キーワード引数
-function execute({ arg1, arg2 }) {
-  return { arg1, arg2 };
+// function execute({ arg1, arg2 }) {
+//   return { arg1, arg2 };
+// }
+
+// const result = execute({ arg1: 'test1', arg2: 'test2' });
+// console.log(result);
+
+// // 可変長引数
+// function execute(...args) {
+//   console.log(args[0]);
+//   console.log(args[1]);
+// }
+
+// execute('hujii', 'sample@example.com');
+
+// オプション引数
+function execute({ ...args }) {
+  console.log(args.name);
+  console.log(args.email);
 }
 
-const result = execute({ arg1: 'test1', arg2: 'test2' });
-console.log(result);
+execute({
+  name: 'fujii',
+  email: 'sample@example',
+});
