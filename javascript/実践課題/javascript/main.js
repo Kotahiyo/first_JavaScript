@@ -1,12 +1,15 @@
+let initialNum = 0;
 const countFigure = document.getElementsByClassName('count-figure');
-countFigure[0].innerText = 0;
+countFigure[0].innerText = initialNum;
 
 const clickOutPlus = function () {
-  console.log('プラスボタン');
+  initialNum += 1;
+  countFigure[0].innerText = initialNum;
 };
 
 const clickOutminus = function () {
-  console.log('マイナスボタン');
+  initialNum -= 1;
+  countFigure[0].innerText = initialNum;
 };
 
 const countUp = document.getElementsByClassName('count-up');
