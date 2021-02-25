@@ -24,14 +24,20 @@ const user = {
   name: 'fujii',
   age: 29,
 };
-// オブジェクトのキーを取り出している
-const keys = Object.keys(user);
+// // オブジェクトのキーを取り出している
+// const keys = Object.keys(user);
 
-keys.forEach((key) => {
-  console.log(key);
-  // key と value を持っているもの = オブジェクト
-  // オブジェクト[key] と指定すると value が取り出せる
-  // 以下では user["name"], user["age"] と同じ意味
+// keys.forEach((key) => {
+//   console.log(key);
+//   // key と value を持っているもの = オブジェクト
+//   // オブジェクト[key] と指定すると value が取り出せる
+//   // 以下では user["name"], user["age"] と同じ意味
+//   const value = user[key];
+//   console.log(value);
+// });
+
+// for ...in で取り出す
+for (let key in user) {
   const value = user[key];
-  console.log(value);
-});
+  console.log(`${key}: ${value}`);
+}
