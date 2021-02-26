@@ -11,17 +11,38 @@
 // robot.sayHello();
 
 // クラスの初期値設定
-class Robot {
-  constructor(color) {
-    this.color = color;
+// class Robot {
+//   constructor(color) {
+//     this.color = color;
+//   }
+// }
+
+// const robot = new Robot('red');
+
+// // ゲッター
+// console.log(robot.color);
+// // セッター
+// robot.color = 'blue';
+
+// console.log(robot.color);
+
+// 継承とオーバーライド
+class TvRemortController {
+  power() {
+    console.log('TV の電源をつける');
   }
 }
 
-const robot = new Robot('red');
+// 継承
+class BlackTvRemortController extends TvRemortController {
+  // オーバーライド
+  power() {
+    console.log('黒いTV の電源をつける');
+  }
+}
 
-// ゲッター
-console.log(robot.color);
-// セッター
-robot.color = 'blue';
+const controller = new TvRemortController();
+controller.power();
 
-console.log(robot.color);
+const blackController = new BlackTvRemortController();
+blackController.power();
