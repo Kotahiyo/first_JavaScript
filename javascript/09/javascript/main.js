@@ -44,17 +44,33 @@
 // user.sayMyName();
 
 // オブジェクトの分割代入
+// const user = {
+//   name: 'fujii',
+//   age: 29,
+//   sayHello() {
+//     console.log('Hello');
+//   },
+// };
+
+// // user オブジェクトから分割代入
+// const { name, sayHello } = user;
+
+// console.log(name);
+// console.log(sayHello);
+// sayHello();
+
+// オブジェクトを作る際、キーとバリューが一緒なら省略できる
+const name = 'fujii';
+const age = 29;
+
+// const user = {
+//   name: name,
+//   age: age,
+// };
+// キーとバリューが一緒なので、以下のように省略できる
 const user = {
-  name: 'fujii',
-  age: 29,
-  sayHello() {
-    console.log('Hello');
-  },
+  name,
+  age,
 };
 
-// user オブジェクトから分割代入
-const { name, sayHello } = user;
-
-console.log(name);
-console.log(sayHello);
-sayHello();
+console.log(user);
