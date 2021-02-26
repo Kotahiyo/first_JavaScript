@@ -36,9 +36,25 @@
 // };
 
 // アロー関数の省略
+// const user = {
+//   sayMyName() {
+//     console.log('My name is Kouhei Fujii');
+//   },
+// };
+// user.sayMyName();
+
+// オブジェクトの分割代入
 const user = {
-  sayMyName() {
-    console.log('My name is Kouhei Fujii');
+  name: 'fujii',
+  age: 29,
+  sayHello() {
+    console.log('Hello');
   },
 };
-user.sayMyName();
+
+// user オブジェクトから分割代入
+const { name, sayHello } = user;
+
+console.log(name);
+console.log(sayHello);
+sayHello();
