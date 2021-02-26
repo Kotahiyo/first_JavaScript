@@ -1,4 +1,4 @@
-// 関数の基本系
+// 関数の基本形
 // function plus1(number) {
 //   return number + 1;
 // }
@@ -14,8 +14,31 @@
 // };
 
 // シンプルな関数の場合、1行にまとめられる
-const plus1 = (number) => number + 1;
+// const plus1 = (number) => number + 1;
 
-const number = 10;
-const result = plus1(number);
-console.log(result);
+// const number = 10;
+// const result = plus1(number);
+// console.log(result);
+
+// オブジェクトのメソッドの省略形
+// 基本形
+// const user = {
+//   sayMyName: function () {
+//     console.log('My name is Kouhei Fujii');
+//   },
+// };
+
+// アロー関数
+// const user = {
+//   sayMyName: () => {
+//     console.log('My name is Kouhei Fujii');
+//   },
+// };
+
+// アロー関数の省略
+const user = {
+  sayMyName() {
+    console.log('My name is Kouhei Fujii');
+  },
+};
+user.sayMyName();
