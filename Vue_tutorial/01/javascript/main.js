@@ -44,3 +44,10 @@ var app5 = new Vue({
     },
   },
 });
+
+var ap6 = new Vue({
+  el: "#app-6",
+  data: {
+    message: "今日テャ！",
+  },
+});
