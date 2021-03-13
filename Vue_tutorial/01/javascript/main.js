@@ -29,3 +29,18 @@ var app4 = new Vue({
     ],
   },
 });
+
+var app5 = new Vue({
+  el: "#app-5",
+  data: {
+    message: "こんにちは！ Vue.js の練習中です！",
+  },
+  methods: {
+    reverseMessage: function () {
+      this.message = this.message.split("").reverse().join("");
+    },
+    alertClick: function () {
+      alert("アラート出します！");
+    },
+  },
+});
