@@ -9,6 +9,18 @@
   </head>
   <body>
     <div id="app">{{ message }}</div>
+
+    <div id="app-2">
+      <span v-bind:title="message">
+        Hover your mouse over me for a few seconds to see my dynamically bound
+        title!
+      </span>
+    </div>
+
+    <div id="app-3">
+      <span v-if="seen">見えてますか？</span>
+    </div>
+
     <script src="./javascript/main.js"></script>
   </body>
 </html>
