@@ -10,14 +10,25 @@
   <body>
     <div id="app">
       <thead>
-        <tr v-for="item in todos" v-bind:key="item.id">
+        <tr>
           <th class="id">ID</th>
           <th class="comment">コメント</th>
           <th class="state">状態</th>
           <th class="button">-</th>
         </tr>
       </thead>
-      <tbody></tbody>
+      <tbody>
+        <tr v-for="item in todos" v-bind:key="item.id">
+          <th>{{ item.id }}</th>
+          <td>{{ item.comment }}</td>
+          <td class="state">
+            <button>{{ item.state }}</button>
+          </td>
+          <td class="button">
+            <button>削除</button>
+          </td>
+        </tr>
+      </tbody>
     </div>
     <script src="./javascript/main.js"></script>
   </body>
