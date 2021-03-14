@@ -8,7 +8,17 @@
     <title>Document</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <thead>
+        <tr v-for="item in todos" v-bind:key="item.id">
+          <th class="id">ID</th>
+          <th class="comment">コメント</th>
+          <th class="state">状態</th>
+          <th class="button">-</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </div>
     <script src="./javascript/main.js"></script>
   </body>
 </html>
